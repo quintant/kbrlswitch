@@ -1,0 +1,10 @@
+#!/bin/bash
+var="$(setxkbmap -query | grep layout | grep -o us)"
+# echo $var
+if [ -z $var ] 
+then
+	setxkbmap us
+else
+	setxkbmap is
+fi
+
